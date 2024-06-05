@@ -1948,61 +1948,61 @@ LOAD linker stubs
  .debug_line    0x0000000000008a6b      0x206 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memmove.o)
  .debug_line    0x0000000000008c71       0xf4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strlen-stub.o)
 
-.debug_str      0x0000000000000000    0x165ac
- .debug_str     0x0000000000000000      0x65e main.o
-                                        0x741 (size before relaxing)
- .debug_str     0x000000000000065e      0x1eb rtos/heap_4.o
-                                        0x377 (size before relaxing)
- .debug_str     0x0000000000000849      0x11e rtos/list.o
-                                        0x2d1 (size before relaxing)
- .debug_str     0x0000000000000967      0x183 rtos/port.o
-                                        0x32b (size before relaxing)
- .debug_str     0x0000000000000aea      0x466 rtos/queue.o
-                                        0x7e0 (size before relaxing)
- .debug_str     0x0000000000000f50      0x823 rtos/tasks.o
-                                        0xdc0 (size before relaxing)
- .debug_str     0x0000000000001773       0x40 rtos/opencm3.o
-                                        0x1f4 (size before relaxing)
- .debug_str     0x00000000000017b3       0xad /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
- .debug_str     0x0000000000001860      0x6bc /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1//rtos/libwwg/libwwg.a(usbcdc.o)
+.debug_str      0x0000000000000000    0x165a8
+ .debug_str     0x0000000000000000      0x65a main.o
+                                        0x73d (size before relaxing)
+ .debug_str     0x000000000000065a      0x1eb rtos/heap_4.o
+                                        0x373 (size before relaxing)
+ .debug_str     0x0000000000000845      0x11e rtos/list.o
+                                        0x2cd (size before relaxing)
+ .debug_str     0x0000000000000963      0x183 rtos/port.o
+                                        0x327 (size before relaxing)
+ .debug_str     0x0000000000000ae6      0x466 rtos/queue.o
+                                        0x7dc (size before relaxing)
+ .debug_str     0x0000000000000f4c      0x823 rtos/tasks.o
+                                        0xdbc (size before relaxing)
+ .debug_str     0x000000000000176f       0x40 rtos/opencm3.o
+                                        0x1f0 (size before relaxing)
+ .debug_str     0x00000000000017af       0xad /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
+ .debug_str     0x000000000000185c      0x6bc /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1//rtos/libwwg/libwwg.a(usbcdc.o)
                                         0xc5f (size before relaxing)
- .debug_str     0x0000000000001f1c      0x106 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1//rtos/libwwg/libwwg.a(miniprintf.o)
+ .debug_str     0x0000000000001f18      0x106 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1//rtos/libwwg/libwwg.a(miniprintf.o)
                                         0x2c6 (size before relaxing)
- .debug_str     0x0000000000002022       0x57 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1//rtos/libwwg/libwwg.a(mcuio.o)
+ .debug_str     0x000000000000201e       0x57 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1//rtos/libwwg/libwwg.a(mcuio.o)
                                         0x26b (size before relaxing)
- .debug_str     0x0000000000002079       0x25 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1//rtos/libwwg/libwwg.a(getline.o)
+ .debug_str     0x0000000000002075       0x25 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1//rtos/libwwg/libwwg.a(getline.o)
                                         0x189 (size before relaxing)
- .debug_str     0x000000000000209e      0x32d /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1//rtos/libwwg/libwwg.a(uartlib.o)
+ .debug_str     0x000000000000209a      0x32d /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1//rtos/libwwg/libwwg.a(uartlib.o)
                                         0x866 (size before relaxing)
- .debug_str     0x00000000000023cb     0x7f80 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
+ .debug_str     0x00000000000023c7     0x7f80 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(gpio.o)
                                        0x8128 (size before relaxing)
- .debug_str     0x000000000000a34b       0x74 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
+ .debug_str     0x000000000000a347       0x74 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(gpio_common_all.o)
                                        0x8126 (size before relaxing)
- .debug_str     0x000000000000a3bf     0x3387 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
+ .debug_str     0x000000000000a3bb     0x3387 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(rcc.o)
                                        0x7d88 (size before relaxing)
- .debug_str     0x000000000000d746      0x379 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
+ .debug_str     0x000000000000d742      0x379 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(rcc_common_all.o)
                                        0x748b (size before relaxing)
- .debug_str     0x000000000000dabf     0x1169 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(usart_common_all.o)
+ .debug_str     0x000000000000dabb     0x1169 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(usart_common_all.o)
                                        0x80de (size before relaxing)
- .debug_str     0x000000000000ec28       0x2d /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(usart_common_f124.o)
+ .debug_str     0x000000000000ec24       0x2d /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(usart_common_f124.o)
                                        0x7e4a (size before relaxing)
- .debug_str     0x000000000000ec55     0x3808 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(usb.o)
+ .debug_str     0x000000000000ec51     0x3808 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(usb.o)
                                        0x784e (size before relaxing)
- .debug_str     0x000000000001245d      0x1a2 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(usb_control.o)
+ .debug_str     0x0000000000012459      0x1a2 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(usb_control.o)
                                        0x7867 (size before relaxing)
- .debug_str     0x00000000000125ff      0x2a4 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(usb_standard.o)
+ .debug_str     0x00000000000125fb      0x2a4 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(usb_standard.o)
                                        0x799a (size before relaxing)
- .debug_str     0x00000000000128a3     0x1581 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(st_usbfs_v1.o)
+ .debug_str     0x000000000001289f     0x1581 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(st_usbfs_v1.o)
                                        0x95e7 (size before relaxing)
- .debug_str     0x0000000000013e24     0x2489 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
+ .debug_str     0x0000000000013e20     0x2489 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(vector.o)
                                        0x6177 (size before relaxing)
- .debug_str     0x00000000000162ad       0x64 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
+ .debug_str     0x00000000000162a9       0x64 /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(flash_common_all.o)
                                        0x5076 (size before relaxing)
- .debug_str     0x0000000000016311      0x12c /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(st_usbfs_core.o)
+ .debug_str     0x000000000001630d      0x12c /mnt/c/Users/Formulatrix/Documents/PyRepo/stm32f1/libopencm3/lib/libopencm3_stm32f1.a(st_usbfs_core.o)
                                        0x94f3 (size before relaxing)
- .debug_str     0x000000000001643d      0x12e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memmove.o)
+ .debug_str     0x0000000000016439      0x12e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memmove.o)
                                         0x1d2 (size before relaxing)
- .debug_str     0x000000000001656b       0x41 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strlen-stub.o)
+ .debug_str     0x0000000000016567       0x41 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strlen-stub.o)
                                         0x1b1 (size before relaxing)
 
 .comment        0x0000000000000000       0x33
