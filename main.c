@@ -49,7 +49,7 @@ static void gpio_setup(void) {
 static void main_task (void *args) {
 	(void)args;
 	TickType_t valueToSend = 0;
-	uint16_t del = 100;
+	uint16_t del = 250;
 
 	for (;;) {
 		TickType_t t0 = xTaskGetTickCount();
