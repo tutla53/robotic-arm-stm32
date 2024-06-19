@@ -25,7 +25,6 @@ Development of  2 d.o.f Robot
 /*Global Variable*/
 static QueueHandle_t xQueueOut = NULL, xQueueIn = NULL;
 static SemaphoreHandle_t h_mutex;
-uint16_t vtemp = 0;
 
 extern void vApplicationStackOverflowHook(xTaskHandle *pxTask,signed portCHAR *pcTaskName);
 
@@ -36,8 +35,8 @@ void vApplicationStackOverflowHook(xTaskHandle *pxTask,signed portCHAR *pcTaskNa
 }
 
 typedef struct Message {
-	bool start;
-	uint16_t del;
+	uint16_t vtemp;
+	TickType_t elapsed;
 } Message_t;
 
 /* mutex_lock()/mutex_unlock()
@@ -106,6 +105,7 @@ static void input_task(void *args) {
 		else{
 			ch_buff = std_getc();
 			if(ch_buff == '\n'){
+				if (val == 0) continue;
 				
 				mutex_lock();
 				std_printf("Delay Value = %lu\n", val);
@@ -125,9 +125,12 @@ static void input_task(void *args) {
 static void main_task (void *args) {
 	/*It will be changed to ISR*/
 	(void)args;
-	static const int v25 = 143;
-	TickType_t valueToSend = 0, t0=0;
-	uint32_t del = 500;
+	static const uint16_t v25 = 143;
+	TickType_t t0 = 0;
+	uint32_t del = 200;
+	Message_t send_value;
+	send_value.vtemp = 0;
+	send_value.elapsed = 0;
 
 	for (;;) {
 		t0 = xTaskGetTickCount();
@@ -136,29 +139,34 @@ static void main_task (void *args) {
 		xQueueReceive(xQueueIn, &del, 0u);
 		
 		/*Read Temperature in Degree*/
-		vtemp = (uint16_t)read_adc(ADC_CHANNEL_TEMP) * 3300 / 4095;
-		//vtemp = ((v25-vtemp)/45)+2500;
+		send_value.vtemp = (uint16_t)read_adc(ADC_CHANNEL_TEMP) * 3300 / 4095;
+		send_value.vtemp = ((v25-send_value.vtemp)/45)+2500;
 		
 		vTaskDelay(pdMS_TO_TICKS(del));
-		valueToSend = xTaskGetTickCount()-t0;
+		send_value.elapsed = xTaskGetTickCount()-t0;
 		
 		/*Send the time value to USB*/
-		xQueueSend(xQueueOut, &valueToSend, 0u);
+		xQueueSend(xQueueOut, &send_value, 0u);
 		
 	}
 }
 
 static void output_task (void *args) {
 	(void)args;
-	TickType_t valueToReceived = 0, t0 = 0;
+	TickType_t t0 = 0;
+	Message_t received_value;
 
 	for (;;) {
 		t0 = xTaskGetTickCount();
-		xQueueReceive(xQueueOut, &valueToReceived, portMAX_DELAY);
+		xQueueReceive(xQueueOut, &received_value, portMAX_DELAY);
 		gpio_toggle(GPIOC,GPIO13);
 		
 		mutex_lock();
-		std_printf("T %d, main %lu, usb %lu\n", vtemp, valueToReceived, xTaskGetTickCount()-t0);
+		std_printf("T %d.%02d main %lu, usb %lu\n", 
+					received_value.vtemp/100,
+					received_value.vtemp%100,
+					received_value.elapsed, 
+					xTaskGetTickCount()-t0);
 		mutex_unlock();
 	}
 }
@@ -170,8 +178,8 @@ int main(void) {
 	adc_setup();
 	
 	/*Task Setup*/
-	xQueueOut	= xQueueCreate(10, sizeof(TickType_t));
-	xQueueIn	= xQueueCreate(10, sizeof(uint32_t));
+	xQueueOut	= xQueueCreate(10, sizeof(Message_t));
+	xQueueIn	= xQueueCreate(10, sizeof(uint16_t));
 	h_mutex		= xSemaphoreCreateMutex();
 	
 	/*Create Task*/
