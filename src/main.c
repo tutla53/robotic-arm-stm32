@@ -85,11 +85,23 @@ static void main_task (void *args) {
 		int head_val = read_adc(0);
 		int body_val = read_adc(1);
 			
-        if (head_val > 3500) std_printf("w");
-        else if (head_val < 500) std_printf("s");
+        if (head_val > 3500) {
+			std_printf("w");
+			gpio_toggle(GPIOC,GPIO13);
+		}
+        else if (head_val < 500) {
+			std_printf("s");
+			gpio_toggle(GPIOC,GPIO13);
+		}
 
-        if (body_val > 3500) std_printf("a");
-        else if (body_val < 500) std_printf("d");
+        if (body_val > 3500) {
+			std_printf("a");
+			gpio_toggle(GPIOC,GPIO13);
+		}
+        else if (body_val < 500) {
+			std_printf("d");
+			gpio_toggle(GPIOC,GPIO13);
+		}
 		
 		vTaskDelay(pdMS_TO_TICKS(100));
 
